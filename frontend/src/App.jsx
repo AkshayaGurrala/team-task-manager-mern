@@ -11,6 +11,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import Tasks from './pages/Tasks';
 import Teams from './pages/Teams';
 import TeamDetail from './pages/TeamDetail';
+import Landing from './pages/Landing';
 
 function App() {
   return (
@@ -21,18 +22,20 @@ function App() {
           toastOptions={{
             duration: 3000,
             style: {
-              background: '#1e293b',
+              background: '#121a2d',
               color: '#f1f5f9',
-              border: '1px solid #334155',
+              border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: '12px',
               fontSize: '14px',
+              backdropFilter: 'blur(8px)',
             },
-            success: { iconTheme: { primary: '#22c55e', secondary: '#fff' } },
+            success: { iconTheme: { primary: '#6366f1', secondary: '#fff' } },
             error: { iconTheme: { primary: '#ef4444', secondary: '#fff' } },
           }}
         />
         <Routes>
           {/* Public */}
+          <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
