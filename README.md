@@ -126,26 +126,21 @@ npm run dev
 - Backend: http://localhost:5000
 - Frontend: http://localhost:5173
 
----
+## 🌐 Deployment (Unified MERN on Railway)
 
-## 🌐 Deployment
+This project is optimized for a single-service deployment on Railway. The backend serves the built frontend automatically.
 
-### Backend → Railway
-
-1. Go to [railway.app](https://railway.app) and create a new project
-2. Connect your GitHub repo
-3. Set root directory to `backend`
-4. Add environment variables: `MONGO_URI`, `JWT_SECRET`, `NODE_ENV=production`
-5. Railway auto-detects Node.js and runs `npm start`
-
-### Frontend → Vercel
-
-1. Go to [vercel.com](https://vercel.com) and import your repo
-2. Set root directory to `frontend`
-3. Add environment variable: `VITE_API_URL=https://your-railway-backend.up.railway.app/api`
-4. Deploy
+1. Go to [railway.app](https://railway.app) and create a new project.
+2. Connect your GitHub repo.
+3. **IMPORTANT**: Keep the `Root Directory` as `/` (default).
+4. Add the following environment variables:
+   - `MONGO_URI`: Your MongoDB connection string.
+   - `JWT_SECRET`: A secure random key.
+   - `NODE_ENV`: `production`
+5. Railway will automatically detect the root `package.json`, install all dependencies for both frontend and backend, build the frontend, and start the production server.
 
 ---
+
 
 ## 📡 API Endpoints
 
